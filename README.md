@@ -1,2 +1,59 @@
-# andrew-testlib-py
-O Andrew Testing Library para Python é uma ferramenta de teste, análoga ao Andrew Testing Library que é um outro projeto meu feito para testes em TS/JS. Ela é bem mais simples que ferramentas mais parrudas, mas para testes simples deve cumprir bem seu objetivo. 
+<center><img src="https://cdn2.iconfinder.com/data/icons/corona-virus-covid-19-14/512/14_Flask_lab_research_virus-128.png" width="128px"/></center>
+
+## SETTING ANDREW TESTING LIBRARY FOR PYTHON UP
+
+> Download the latest version Andrew Testing Library for Python [here](https://github.com/Redwars22/andrew-testlib-python/releases), extract it somewhere inside the folder of your project and then create a folder named **test** and a file named **example.test.py**, then proceed to the next section.
+
+### WRITING YOUR FIRST TEST
+
+Paste the following code into the example.spec.ts file then save it.
+
+```py
+from andtlib import AndrewTestingLibrary
+
+test = AndrewTestingLibrary("Checks if the sum of two numbers is equal to 8")
+test.start()
+
+num1 = 4
+num2 = 4
+sum = num1 + num2
+
+test.shouldBeEqual(sum, 8)
+test.stop()
+```
+
+The test above checks whether the sum of two numbers is equal to 8. Now open your terminal at the folder where you saved your test and type `python example.test.py`. You should get the following output in the terminal:
+
+<img src="./example.png">
+
+When you create a new object of the AndrewTestingLibrary class, you pass to the constructor the name of your test suite as its argument.
+
+## MATCHERS
+
+- **shouldBeEqual**
+- **shouldNotBeEqual**
+- **shouldBeStrictEqual** (TO DO)
+- **shouldNotBeStrictEqual** (TO DO)
+- **shouldBeNull**
+- **shouldNotBeNull**
+- **shouldBeUndefined**
+- **shouldNotBeUndefined**
+- **shouldBeTruthy**
+- **shouldBeFalsy**
+
+### MATCHERS FOR NUMBERS
+
+- **shouldBeGreaterThan**
+- **shouldNotBeGreaterThan** (TO DO)
+- **shouldBeGreaterThanOrEqual** (TO DO)
+- **shouldNotBeGreaterThanOrEqual** (TO DO)
+- **shouldBeLessThan**
+- **shouldNotBeLessThan** (TO DO)
+- **shouldNotBeLessThanOrEqual** (TO DO)
+
+### MATCHERS FOR COMPARING ARRAYS AND OBJECTS
+
+- **shouldBeEqualArr** (for *arrays/lists*)
+- **shouldNotBeEqualArr** (for *arrays*) (TO DO)
+- **shouldBeEqualObj** (for *objects*) (TO DO)
+- **shouldNotBeEqualObj** (for *objects*) (TO DO)
