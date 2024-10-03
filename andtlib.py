@@ -41,6 +41,7 @@ class AndrewTestingLibrary:
             print("❌ One or more tests failed")
 
         if len(self.report) > 0:
+            print("\n=======================================\n")
             i = 0
             while i < len(self.report):
                 print(self.report[i])
@@ -57,12 +58,13 @@ class AndrewTestingLibrary:
             return
         pass
 
-    def __compare(self, expr, msgIfErr):
+    def __compare(self, expr, reportMsg):
         if expr:
             self.__passTest()
+            self.report.append("✅ PASS - Expects " + reportMsg)
         else:
             self.__failTest()
-            self.report.append("Expected " + msgIfErr)
+            self.report.append("❌ FAIL - Expected " + reportMsg)
 
     def shouldBeEqual(self, arg1, arg2):
         self.__compare(arg1 == arg2, str(arg1) + " to be equal to " + str(arg2))

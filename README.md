@@ -24,7 +24,7 @@ test.stop()
 
 The test above checks whether the sum of two numbers is equal to 8. Now open your terminal at the folder where you saved your test and type `python example.test.py`. You should get the following output in the terminal:
 
-<img src="./example.png">
+<img src="./example.jpg">
 
 When you create a new object of the AndrewTestingLibrary class, you pass to the constructor the name of your test suite as its argument.
 
