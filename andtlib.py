@@ -68,17 +68,23 @@ class AndrewTestingLibrary:
         self.__compare(arg1 == arg2, str(arg1) + " to be equal to " + str(arg2))
 
     def shouldBeGreaterThan(self, arg1, arg2):
-        self.__compare(arg1 > arg2, str(arg1) + " to be larger than " + str(arg2))
+        self.__compare(arg1 > arg2, str(arg1) + " to be greater than " + str(arg2))
+
+    def shouldBeGreaterOrEqual(self, arg1, arg2):
+        self.__compare(arg1 > arg2 or arg1 == arg2, str(arg1) + " to be greater than or equal to " + str(arg2))
 
     def shouldBeLessThan(self, arg1, arg2):
         self.__compare(arg1 < arg2, str(arg1) + " to be less than " + str(arg2))
+
+    def shouldBeLessOrEqual(self, arg1, arg2):
+        self.__compare(arg1 < arg2 or arg1 == arg2, str(arg1) + " to be less than or equal to " + str(arg2))
 
     def shouldNotBeEqual(self, arg1, arg2):
         self.__compare(not (arg1 == arg2), str(arg1) + " not to be equal to " + str(arg2))
         pass
 
-    def shouldBeStrictEqual(self, expr):
-        pass
+    def shouldBeStrictEqual(self, arg1, arg2):
+        self.__compare(type(arg1) == type(arg2), "the two values aren't exactly the same")
 
     def shouldBeNull(self, expr):
         self.__compare(expr == None, str(expr) + " to be null")

@@ -2,7 +2,7 @@
 
 ## SETTING ANDREW TESTING LIBRARY FOR PYTHON UP
 
-> Download the latest version Andrew Testing Library for Python [here](https://github.com/Redwars22/andrew-testlib-python/releases), extract it somewhere inside the folder of your project and then create a folder named **test** and a file named **example.test.py**, then proceed to the next section.
+> Download the latest version Andrew Testing Library for Python [here](https://github.com/Redwars22/andrew-testlib-py/releases), extract it somewhere inside the folder of your project and then create a folder named **test** and a file named **example.test.py**, then proceed to the next section.
 
 ### WRITING YOUR FIRST TEST
 
@@ -32,8 +32,7 @@ When you create a new object of the AndrewTestingLibrary class, you pass to the 
 
 - **shouldBeEqual**
 - **shouldNotBeEqual**
-- **shouldBeStrictEqual** (TO DO)
-- **shouldNotBeStrictEqual** (TO DO)
+- **shouldBeStrictEqual**
 - **shouldBeNull**
 - **shouldNotBeNull**
 - **shouldBeUndefined**
@@ -44,16 +43,10 @@ When you create a new object of the AndrewTestingLibrary class, you pass to the 
 ### MATCHERS FOR NUMBERS
 
 - **shouldBeGreaterThan**
-- **shouldNotBeGreaterThan** (TO DO)
-- **shouldBeGreaterThanOrEqual** (TO DO)
-- **shouldNotBeGreaterThanOrEqual** (TO DO)
+- **shouldBeGreaterOrEqual**
 - **shouldBeLessThan**
-- **shouldNotBeLessThan** (TO DO)
-- **shouldNotBeLessThanOrEqual** (TO DO)
+- **shouldBeLessOrEqual**
 
-### MATCHERS FOR COMPARING ARRAYS AND OBJECTS
+### MATCHERS FOR COMPARING ARRAYS/LISTS
 
 - **shouldBeEqualArr** (for *arrays/lists*)
-- **shouldNotBeEqualArr** (for *arrays*) (TO DO)
-- **shouldBeEqualObj** (for *objects*) (TO DO)
-- **shouldNotBeEqualObj** (for *objects*) (TO DO)
